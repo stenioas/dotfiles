@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env /bash
 
-DOTFILES_DIR=~/.dotfiles
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+DOTFILES_DIR=${SCRIPT_DIR}
 CONFIG_DIR=~/.config
 
 declare -A DOTFILES
