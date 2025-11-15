@@ -11,40 +11,40 @@
 
 configuration {
 	modes: "drun";
-	font: "Monaspace Neon Frozen 12";
+	font: "Terminess Nerd Font Propo 12";
 	drun-display-format: "{name}";
 }
 
 /*-----Global-----*/
 
 * {
-	color0: #282828;
-	color2: #98971a;
-	color3: #504945;
-	color4: #458588;
-	color5: #ebdbb2;
-	color8: #32302f;
-	color9: #3c3836;
+	color0: #11111b;
+	color2: #89b4fa;
+	color3: #74c7ec;
+	color4: #7f849c;
+	color5: #f4f4f4;
+	color8: #181825;
+	color9: #1e1e2e;
 
 	fg-highlight: @color4;
 
 	bg-entry: @color9;
 	fg-entry: @color4;
-	fg-placeholder: #ebdbb250;
+	fg-placeholder: #6c7086;
 
 	bg-listview: @color0;
 	fg-element: @color5;
 
 	bg-element-selected: @color8;
-	fg-element-selected: @color2;
+	fg-element-selected: @color5;
 	border-color-element-selected: @color3;
 
 	bg-inputbar: @color0;
 
-	border-color: @color3;
+	border-color: #7f849c;
 
 	// border-radius
-    br: 2px;
+  br: 4px;
 
 	border-size-window: 2px;
 	border-size-element-selected: 2px;
@@ -65,7 +65,7 @@ window {
 	border: @border-size-window;
 	border-color: @border-color;
 
-	border-radius: @br;
+	border-radius: 8px;
 
 	width: 20%;
 }
@@ -83,6 +83,8 @@ inputbar {
 	children: [entry];
 
 	background-color: @bg-inputbar;
+
+	padding: 16px;
 }
 
 entry {
@@ -96,8 +98,7 @@ entry {
 
 	border-radius: @br;
 
-	padding: 12px;
-	margin: 10px;
+	padding: 16px;
     
 	vertical-align: 0.5;
 
@@ -115,7 +116,7 @@ listview {
 
 	background-color: @bg-listview;
 
-	padding: 10px;
+	padding: 0px 16px;
 }
 
 element {
@@ -146,10 +147,7 @@ element-text {
 
 element selected.normal {
 	// background-color: @bg-listview;
-	background-color: @bg-element-selected;
-
-	border: @border-size-element-selected;
-	border-color: @border-color-element-selected;
+	background-color: @bg-entry;
 }
 
 element-text selected {
