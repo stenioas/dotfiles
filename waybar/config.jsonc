@@ -3,9 +3,17 @@
   "position": "top",
   "height": 30,
   "spacing": 4,
-  "modules-left": ["hyprland/workspaces", "cpu", "memory", "disk"],
+  "modules-left": [
+    "custom/spacer",
+    "hyprland/workspaces",
+    "cpu",
+    "memory",
+    "disk",
+    "uptime"
+  ],
   "modules-center": ["clock"],
   "modules-right": [
+    "custom/updates",
     "tray",
     "idle_inhibitor",
     "keyboard-state",
@@ -13,9 +21,13 @@
     "backlight",
     "hyprland/language",
     "battery",
-    "custom/media"
+    "custom/media",
+    "custom/spacer"
   ],
-  // Modules configuration
+  // TODO: substituir por padding via CSS
+  "custom/spacer": {
+    "format": "<span></span>"
+  },
   "hyprland/workspaces": {
     "persistent-workspaces": {
       "1": [],
@@ -43,6 +55,17 @@
     "format": " {used}",
     "path": "/"
   },
+  "uptime": {
+    // Formato padrão: Horas, Minutos, Segundos
+    "format": "UP  {}",
+
+    // Você pode personalizar o formato para ser mais legível:
+    // "format": "UP: {days}d {hours}h {minutes}m",
+
+    // Tooltip: O que aparece ao passar o mouse
+    "tooltip": true,
+    "tooltip-format": "Sistema ativo há: {days} dias, {hours} horas e {minutes} minutos."
+  },
   "keyboard-state": {
     "numlock": true,
     "capslock": true,
@@ -58,6 +81,14 @@
       "activated": "",
       "deactivated": ""
     }
+  },
+  "custom/updates": {
+    "format": " {}", // Ícone de download (fa-download) e o valor retornado pelo script
+    "exec": "/usr/bin/bash ~/.config/waybar/scripts/check-updates.sh",
+    "return-type": "json",
+    "interval": 3600, // Checa a cada 1 hora (3600 segundos). Evita sobrecarga.
+    "on-click": "kitty -e sudo pacman -Syyu", // Ação ao clicar: Abre um terminal e executa a atualização
+    "tooltip": true
   },
   "tray": {
     "icon-size": 16,
