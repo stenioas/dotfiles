@@ -11,7 +11,7 @@
 
 configuration {
 	modes: "drun";
-	font: "Terminess Nerd Font Propo 12";
+	font: "Noto Sans Nerd Font Propo 12";
 	drun-display-format: "{name}";
 }
 
@@ -44,7 +44,7 @@ configuration {
 	border-color: #7f849c;
 
 	// border-radius
-  br: 4px;
+  br: 8px;
 
 	border-size-window: 2px;
 	border-size-element-selected: 2px;
@@ -67,7 +67,7 @@ window {
 
 	border-radius: 8px;
 
-	width: 20%;
+	width: 480px;
 }
 
 /*-----Main Box-----*/
