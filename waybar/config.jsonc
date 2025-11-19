@@ -87,7 +87,7 @@
     "exec": "/usr/bin/bash ~/.config/waybar/scripts/check-updates.sh",
     "return-type": "json",
     "interval": 3600, // Checa a cada 1 hora (3600 segundos). Evita sobrecarga.
-    "on-click": "kitty -e sudo pacman -Syyu", // Ação ao clicar: Abre um terminal e executa a atualização
+    "on-click": "kitty -e sudo pacman -Syu --noconfirm", // Ação ao clicar: Abre um terminal e executa a atualização
     "tooltip": true
   },
   "tray": {
