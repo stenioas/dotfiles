@@ -11,7 +11,7 @@
 
 configuration {
 	modes: "drun";
-	font: "Noto Sans Nerd Font Propo 12";
+	font: "Inconsolata Nerd Font Propo 13";
 	drun-display-format: "{name}";
 }
 

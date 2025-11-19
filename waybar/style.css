@@ -4,9 +4,12 @@
 
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: "Terminess Nerd Font Propo", "JetBrainsMono Nerd Font Propo",
-    FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: "Inconsolata Nerd Font Propo", "Hack Nerd Font Propo",
+    "Iosevka Nerd Font Propo", "Terminess Nerd Font Propo",
+    "JetBrainsMono Nerd Font Propo", FontAwesome, Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 window#waybar {
