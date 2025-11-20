@@ -83,11 +83,11 @@
     }
   },
   "custom/updates": {
-    "format": " {}", // Ícone de download (fa-download) e o valor retornado pelo script
-    "exec": "/usr/bin/bash ~/.config/waybar/scripts/check-updates.sh",
+    "format": " {}",
+    "exec": "/usr/bin/bash ~/.config/waybar/scripts/checkupdates.sh",
     "return-type": "json",
-    "interval": 3600, // Checa a cada 1 hora (3600 segundos). Evita sobrecarga.
-    "on-click": "kitty -e sudo pacman -Syu --noconfirm", // Ação ao clicar: Abre um terminal e executa a atualização
+    "interval": 3600,
+    "on-click": "kitty -e sudo pacman -Syu --noconfirm",
     "tooltip": true
   },
   "tray": {
