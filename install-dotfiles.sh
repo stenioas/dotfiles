@@ -10,7 +10,7 @@ DOTFILES=(
     ["hypr"]="$CONFIG_DIR/hypr"
     ["rofi"]="$CONFIG_DIR/rofi"
     ["waybar"]="$CONFIG_DIR/waybar"
-    # ["kitty"]="$CONFIG_DIR/kitty"
+    ["kitty"]="$CONFIG_DIR/kitty"
     # ["dunst"]="$CONFIG_DIR/dunst"
 )
 
