@@ -39,6 +39,4 @@ for file in "${!HOME_FILES[@]}"; do
     echo "Copied $SOURCE -> $HOME"
 done
 
-hyprctl reload
-
 echo "Dotfiles setup complete!"
